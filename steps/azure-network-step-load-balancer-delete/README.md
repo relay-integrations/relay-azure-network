@@ -1,4 +1,4 @@
-# azure-network-delete-load-balancers
+# azure-network-step-load-balancer-delete
 
 This [Azure](https://azure.microsoft.com/en-us/services/load-balancer/) step container deletes a set of 
 Azure Load Balancers in an Azure subscription given a set of resource IDs
@@ -22,7 +22,7 @@ None
 steps:
 # ...
 - name: delete-load-balancers
-  image: projectnebula/azure-network-delete-load-balancers
+  image: relaysh/azure-network-step-load-balancer-delete
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

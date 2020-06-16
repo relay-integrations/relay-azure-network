@@ -1,4 +1,4 @@
-# azure-network-delete-network-interfaces
+# azure-network-step-nic-delete
 
 This [Azure](https://azure.microsoft.com/en-us/services/#networking) step container deletes a set of 
 Azure Network Interfaces in an Azure subscription given a set of resource IDs
@@ -22,7 +22,7 @@ None
 steps:
 # ...
 - name: delete-nics
-  image: projectnebula/azure-network-delete-network-interfaces
+  image: relaysh/azure-network-step-nic-delete
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

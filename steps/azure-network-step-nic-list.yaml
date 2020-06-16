@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: azure-network-list-load-balancers
+name: azure-network-step-nic-list
 version: 1
 summary: |
 

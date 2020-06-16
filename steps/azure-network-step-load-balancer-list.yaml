@@ -1,6 +1,6 @@
 apiVersion: integration/v1
 kind: Step
-name: azure-network-delete-load-balancers
+name: azure-network-step-load-balancer-list
 version: 1
 summary: |
 

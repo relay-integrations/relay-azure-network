@@ -8,10 +8,10 @@ The following are supported actions:
 
 |   Type    |  Name              |
 |-----------|--------------------|
-| Step      | [azure-network-delete-load-balancers](/steps/azure-network-delete-load-balancers)  | 
-| Step      | [azure-network-delete-nics](/steps/azure-network-delete-nics)  | 
-| Step      | [azure-network-list-load-balancers](/steps/azure-network-list-load-balancers)  | 
-| Step      | [azure-network-list-nics](/steps/azure-network-list-nics)  | 
+| Step      | [azure-network-step-load-balancer-delete](/steps/azure-network-step-load-balancer-delete)  | 
+| Step      | [azure-network-step-nic-delete](/steps/azure-network-step-nic-delete)  | 
+| Step      | [azure-network-step-load-balancer-list](/steps/azure-network-step-load-balancer-list)  | 
+| Step      | [azure-network-step-nic-list](/steps/azure-network-step-nic-list)  | 
 
 
 ## Contributing

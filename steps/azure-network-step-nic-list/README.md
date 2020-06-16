@@ -1,4 +1,4 @@
-# List Azure Network Interfaces
+# azure-network-step-nic-list
 
 This [Azure](hhttps://azure.microsoft.com/en-us/services/#networking/) step container lists the network interfaces
 in an Azure subscription or resource group and sets an output, `networkInterfaces`, to an array of network interface objects.
@@ -23,7 +23,7 @@ in an Azure subscription or resource group and sets an output, `networkInterface
 steps:
 # ...
 - name: list-nics
-  image: projectnebula/azure-network-list-nics
+  image: relaysh/azure-network-step-nic-list
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

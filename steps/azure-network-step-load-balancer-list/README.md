@@ -1,4 +1,4 @@
-# azure-network-list-load-balancers
+# azure-network-step-load-balancer-list
 
 This [Azure](https://azure.microsoft.com/en-us/services/load-balancer/) step container lists the load 
 balancers in an Azure subscription or resource group and sets an output, `loadbalancers`, to an array of 
@@ -24,7 +24,7 @@ load balancer objects.
 steps:
 # ...
 - name: list-load-balancers
-  image: projectnebula/azure-network-list-load-balancers
+  image: relaysh/azure-network-step-load-balancer-list
   spec:
     azure:
       connection: !Connection { type: azure, name: my-azure-account }

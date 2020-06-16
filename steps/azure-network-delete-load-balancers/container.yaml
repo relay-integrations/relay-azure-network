@@ -1,6 +1,0 @@
-apiVersion: container/v1
-kind: StepContainer
-inherit: ../hack/defs/azure-python
-title: Delete Azure Load Balancers 
-description: >
-  This task deletes a provided list of Azure Load Balancers
