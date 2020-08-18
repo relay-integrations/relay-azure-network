@@ -2,10 +2,13 @@ apiVersion: integration/v1
 kind: Step
 name: azure-network-step-nic-delete
 version: 1
-summary: |
+summary: Delete NIC
 
 description: |
 
 build:
   apiVersion: build/v1
   kind: Docker
+
+publish:
+  repository: relaysh/azure-network-step-nic-delete
