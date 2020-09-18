@@ -3,20 +3,6 @@
 This [Azure](hhttps://azure.microsoft.com/en-us/services/#networking/) step container lists the network interfaces
 in an Azure subscription or resource group and sets an output, `networkInterfaces`, to an array of network interface objects.
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `azure` || mapping | A mapping of Azure account configuration. | None | True |
-|| `connection` | Azure Connection | Connection for the Azure account. Use the Connection sidebar to configure the Azure Connection | None | True |
-| `resourceGroup` || string | Resource group to look under | None | False | 
-
-## Outputs
-
-| Name | Data type | Description |
-|------|-----------|-------------|
-| `networkInterfaces` | array of Azure Network Interfaces | List of Azure Network Interfaces and metadata. |
-
 ## Example
 
 ```yaml

@@ -12,3 +12,8 @@ build:
 
 publish:
   repository: relaysh/azure-network-step-nic-delete
+
+schemas:
+  spec:
+    source: file
+    file: spec.schema.json

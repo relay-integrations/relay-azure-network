@@ -4,20 +4,6 @@ This [Azure](https://azure.microsoft.com/en-us/services/load-balancer/) step con
 balancers in an Azure subscription or resource group and sets an output, `loadbalancers`, to an array of 
 load balancer objects.
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `azure` || mapping | A mapping of Azure account configuration. | None | True |
-|| `connection` | Azure Connection | Connection for the Azure account. Use the Connection sidebar to configure the Azure Connection | None | True |
-| `resourceGroup` || string | Resource group to look under | None | False | 
-
-## Outputs
-
-| Name | Data type | Description |
-|------|-----------|-------------|
-| `loadbalancers` | array of Azure Load Balancers | List of Azure Load Balancers and metadata. |
-
 ## Example
 
 ```yaml

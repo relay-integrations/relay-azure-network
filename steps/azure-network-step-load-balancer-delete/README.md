@@ -3,19 +3,6 @@
 This [Azure](https://azure.microsoft.com/en-us/services/load-balancer/) step container deletes a set of 
 Azure Load Balancers in an Azure subscription given a set of resource IDs
 
-## Specification
-
-| Setting | Child setting | Data type | Description | Default | Required |
-|---------|---------------|-----------|-------------|---------|----------|
-| `azure` || mapping | A mapping of Azure account configuration. | None | True |
-|| `connection` | Azure Connection | Connection for the Azure account. Use the Connection sidebar to configure the Azure Connection | None | True |
-| `resourceIDs` ||  An array of resource IDs | The list of resource IDs to be deleted | None | True |
-| `waitForDeletion` ||  boolean | Determines whether to wait for deletion before continuing | False | False | 
-
-
-## Outputs
-None
-
 ## Example
 
 ```yaml

@@ -12,3 +12,8 @@ build:
 
 publish:
   repository: relaysh/azure-network-step-load-balancer-delete
+
+schemas:
+  spec:
+    source: file
+    file: spec.schema.json
