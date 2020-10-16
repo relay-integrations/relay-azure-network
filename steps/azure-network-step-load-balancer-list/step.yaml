@@ -20,3 +20,15 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+examples:
+- summary: List Azure load balancers
+  content:
+    apiVersion: v1
+    kind: Step
+    name: list-load-balancers
+    image: relaysh/azure-network-step-load-balancer-list
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      resourceGroup: !Parameter resourceGroup 

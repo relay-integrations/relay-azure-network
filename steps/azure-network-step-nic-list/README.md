@@ -3,19 +3,6 @@
 This [Azure](hhttps://azure.microsoft.com/en-us/services/#networking/) step container lists the network interfaces
 in an Azure subscription or resource group and sets an output, `networkInterfaces`, to an array of network interface objects.
 
-## Example
-
-```yaml
-steps:
-# ...
-- name: list-nics
-  image: relaysh/azure-network-step-nic-list
-  spec:
-    azure:
-      connection: !Connection { type: azure, name: my-azure-account }
-    resourceGroup: 'my_resource_group' 
-```
-
 ## Example output `networkInterfaces`
 
 ```
