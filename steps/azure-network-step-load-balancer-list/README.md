@@ -4,19 +4,6 @@ This [Azure](https://azure.microsoft.com/en-us/services/load-balancer/) step con
 balancers in an Azure subscription or resource group and sets an output, `loadbalancers`, to an array of 
 load balancer objects.
 
-## Example
-
-```yaml
-steps:
-# ...
-- name: list-load-balancers
-  image: relaysh/azure-network-step-load-balancer-list
-  spec:
-    azure:
-      connection: !Connection { type: azure, name: my-azure-account }
-    resourceGroup: 'my_resource_group' 
-```
-
 ## Example output `loadBalancers`
 
 ```

@@ -3,21 +3,6 @@
 This [Azure](https://azure.microsoft.com/en-us/services/#networking) step container deletes a set of 
 Azure Network Interfaces in an Azure subscription given a set of resource IDs
 
-## Example
-
-```yaml
-steps:
-# ...
-- name: delete-nics
-  image: relaysh/azure-network-step-nic-delete
-  spec:
-    azure:
-      connection: !Connection { type: azure, name: my-azure-account }
-    waitForDeletion: true
-    resourceIDs:
-    - /subscriptions/c82736f2-c108-452b-8178-f548c95d18fe/resourceGroups/rg1/providers/Microsoft.Network/networkInterfaces/nic1
- 
-```
 
 ## Notes
 To get the Azure Load Balancer resource IDs, try the following command using the Azure CLI: 

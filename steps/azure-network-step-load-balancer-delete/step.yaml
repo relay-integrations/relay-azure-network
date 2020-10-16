@@ -17,3 +17,17 @@ schemas:
   spec:
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Delete Azure load balancer
+  content:
+    apiVersion: v1
+    kind: Step
+    name: delete-load-balancers
+    image: relaysh/azure-network-step-load-balancer-delete
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      waitForDeletion: true
+      resourceIDs:
+      - !Parameter resourceID

@@ -20,3 +20,16 @@ schemas:
   output:
     source: file
     file: output.schema.json
+
+
+examples:
+- summary: List Azure network interfaces
+  content:
+    apiVersion: v1
+    kind: Step
+    name: list-nics
+    image: relaysh/azure-network-step-nic-list
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      resourceGroup: !Parameter resourceGroup
