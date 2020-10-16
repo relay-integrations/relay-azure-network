@@ -17,3 +17,17 @@ schemas:
   spec:
     source: file
     file: spec.schema.json
+
+examples:
+- summary: Delete Azure network interface
+  content:
+    apiVersion: v1
+    kind: Step
+    name: delete-nics
+    image: relaysh/azure-network-step-nic-delete
+    spec:
+      azure:
+        connection: !Connection { type: azure, name: my-azure-account }
+      waitForDeletion: true
+      resourceIDs:
+      - !Parameter resourceID
