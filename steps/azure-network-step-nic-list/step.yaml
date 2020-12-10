@@ -5,7 +5,7 @@ version: 1
 summary: List NIC
 
 description: |
-
+    Lists the Azure Network Interfaces in an account.
 build:
   apiVersion: build/v1
   kind: Docker
