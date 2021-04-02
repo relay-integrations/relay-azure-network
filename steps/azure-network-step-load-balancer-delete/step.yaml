@@ -4,8 +4,7 @@ name: azure-network-step-load-balancer-delete
 version: 1
 summary: Delete load balancer
 
-description: |
-    Deletes a provided list of Azure load balancers.
+description: Deletes a provided list of Azure load balancers.
 build:
   apiVersion: build/v1
   kind: Docker

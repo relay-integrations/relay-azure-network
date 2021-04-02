@@ -4,8 +4,7 @@ name: azure-network-step-nic-delete
 version: 1
 summary: Delete NIC
 
-description: |
-    Deletes a set of Azure Network Interfaces.
+description: Deletes a set of Azure Network Interfaces.
 build:
   apiVersion: build/v1
   kind: Docker

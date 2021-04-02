@@ -4,8 +4,7 @@ name: azure-network-step-load-balancer-list
 version: 1
 summary: List load balancers
 
-description: |
-    Lists the Azure load balancers in provided subscription.
+description: Lists the Azure load balancers in provided subscription.
 build:
   apiVersion: build/v1
   kind: Docker
