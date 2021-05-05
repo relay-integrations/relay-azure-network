@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
 from azure.identity import ClientSecretCredential
-from azure.mgmt.compute import ComputeManagementClient
+from azure.mgmt.network import NetworkManagementClient
 from relay_sdk import Interface, Dynamic as D
 import logging
 
 logging.basicConfig(level=logging.WARNING)
-
 
 relay = Interface()
 

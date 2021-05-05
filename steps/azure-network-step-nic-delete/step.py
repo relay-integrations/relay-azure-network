@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 
-from azure.common.credentials import ServicePrincipalCredentials
+from azure.identity import ClientSecretCredential
 from azure.mgmt.network import NetworkManagementClient
 from relay_sdk import Interface, Dynamic as D
+import logging
 
+logging.basicConfig(level=logging.WARNING)
 
 relay = Interface()
 
-credentials = ServicePrincipalCredentials(
+credentials = ClientSecretCredential(
     client_id=relay.get(D.azure.connection.clientID),
-    secret=relay.get(D.azure.connection.secret),
-    tenant=relay.get(D.azure.connection.tenantID)
+    client_secret=relay.get(D.azure.connection.secret),
+    tenant_id=relay.get(D.azure.connection.tenantID)
 )
 subscription_id=relay.get(D.azure.connection.subscriptionID)
 network_client = NetworkManagementClient(credentials, subscription_id)
@@ -37,7 +39,7 @@ for resource_id in resource_ids:
   resource_group_name = resource_id.split('/')[4] # Resource group name
   name = resource_id.split('/')[8] 
   print(resource_id)
-  async_operation = network_client.network_interfaces.delete(resource_group_name, name)
+  async_operation = network_client.network_interfaces.begin_delete(resource_group_name, name)
   handle_list.append(async_operation)
 
 if wait:
